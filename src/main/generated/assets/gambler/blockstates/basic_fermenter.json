@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gambler:block/basic_fermenter"
+    }
+  }
+}

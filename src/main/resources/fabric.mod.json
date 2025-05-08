@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "gambler",
+	"version": "${version}",
+	"name": "Gambler's Dream & Alcohol",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "Mythics Law V3",
+	"icon": "assets/gambler/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.mythic_studios.gambler.GamblersDreamAlcohol"
+		],
+		"client": [
+			"org.mythic_studios.gambler.GamblersDreamAlcoholClient"
+		],
+		"modmenu": [
+			"org.mythic_studios.gambler.config.ModMenuIntegration"
+		],
+		"fabric-datagen": [
+			"org.mythic_studios.gambler.GamblersDreamAlcoholDataGenerator"
+		]
+	},
+	"mixins": [
+		"gambler.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

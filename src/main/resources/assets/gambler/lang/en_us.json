@@ -1,0 +1,14 @@
+{
+
+
+  "block.gambler.basic_fermenter": "Basic Fermenter",
+
+  "text.autoconfig.gambler.title": "Gambler's Dream & Alcohol Config",
+  "text.autoconfig.gambler.category.general_settings": "General Settings",
+  "text.autoconfig.gambler.category.fermentation": "Fermentation Settings",
+
+  "text.autoconfig.gambler.option.allowAlcoholPoisoning": "Allow Alcohol Poisoning",
+  "text.autoconfig.gambler.option.allowAlcoholPoisoning.@Tooltip[0]": "Have a chance of being poisoned from consuming alcohol",
+  "text.autoconfig.gambler.option.allowAlcoholPoisoning.@Tooltip[1]": "Default: Yes"
+
+}
