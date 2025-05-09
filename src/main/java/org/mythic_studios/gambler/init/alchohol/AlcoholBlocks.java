@@ -9,7 +9,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import org.mythic_studios.gambler.GamblersDreamAlcohol;
-import org.mythic_studios.gambler.block.BasicFermenterBlock;
+import org.mythic_studios.gambler.block.alcohol.BasicFermenterBlock;
 
 public class AlcoholBlocks {
 

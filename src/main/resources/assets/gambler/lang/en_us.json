@@ -3,6 +3,12 @@
 
   "block.gambler.basic_fermenter": "Basic Fermenter",
 
+  "item.gambler.empty_jug": "Empty Jug",
+  "item.gambler.goose_jug": "Goose in a Jug",
+
+  "tooltip.goose_jug.1": "You monster you stuffed a Goose in a Jug... A JUG",
+  "tooltip.goose_jug.2": "Well it might be able to turned into alcohol",
+
   "text.autoconfig.gambler.title": "Gambler's Dream & Alcohol Config",
   "text.autoconfig.gambler.category.general_settings": "General Settings",
   "text.autoconfig.gambler.category.fermentation": "Fermentation Settings",

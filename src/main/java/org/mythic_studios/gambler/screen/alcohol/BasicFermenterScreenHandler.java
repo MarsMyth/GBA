@@ -10,7 +10,7 @@ import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.util.math.BlockPos;
-import org.mythic_studios.gambler.block.entity.BasicFermenterBlockEntity;
+import org.mythic_studios.gambler.block.alcohol.entity.BasicFermenterBlockEntity;
 import org.mythic_studios.gambler.init.alchohol.AlchoholScreenHandlers;
 
 public class BasicFermenterScreenHandler extends ScreenHandler {

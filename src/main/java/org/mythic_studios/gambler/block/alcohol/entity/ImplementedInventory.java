@@ -1,4 +1,4 @@
-package org.mythic_studios.gambler.block.entity;
+package org.mythic_studios.gambler.block.alcohol.entity;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;

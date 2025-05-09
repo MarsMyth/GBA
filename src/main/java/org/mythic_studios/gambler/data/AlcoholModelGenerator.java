@@ -5,7 +5,9 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Models;
 import org.mythic_studios.gambler.init.alchohol.AlcoholBlocks;
+import org.mythic_studios.gambler.init.alchohol.AlcoholItems;
 
 public class AlcoholModelGenerator extends FabricModelProvider {
     public AlcoholModelGenerator(FabricDataOutput output) {
@@ -21,6 +23,9 @@ public class AlcoholModelGenerator extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+
+        itemModelGenerator.register(AlcoholItems.EMPTY_JUG, Models.GENERATED);
+        itemModelGenerator.register(AlcoholItems.GOOSE_IN_A_JUG, Models.GENERATED);
 
     }
 }

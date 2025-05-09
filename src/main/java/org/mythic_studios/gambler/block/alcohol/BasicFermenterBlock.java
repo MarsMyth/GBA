@@ -1,4 +1,4 @@
-package org.mythic_studios.gambler.block;
+package org.mythic_studios.gambler.block.alcohol;
 
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
@@ -6,7 +6,7 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.world.World;
-import org.mythic_studios.gambler.block.entity.BasicFermenterBlockEntity;
+import org.mythic_studios.gambler.block.alcohol.entity.BasicFermenterBlockEntity;
 import org.mythic_studios.gambler.init.alchohol.AlcoholBlockEntities;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.BlockWithEntity;
@@ -18,7 +18,6 @@ import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class BasicFermenterBlock extends BlockWithEntity {

@@ -1,4 +1,6 @@
-// 1.21.1	2025-05-08T18:35:08.4251065	Gambler's Dream & Alcohol/Model Definitions
+// 1.21.1	2025-05-09T16:50:32.486476	Gambler's Dream & Alcohol/Model Definitions
 4efef17a00921bad27b0c5f0a1432ee1236163ce assets\gambler\blockstates\basic_fermenter.json
 1815595f1f769283cdd81f6c8ea707e1cc15115f assets\gambler\models\item\basic_fermenter.json
+65da5b9dcb03d2792a79b29bc8c97080ca00a881 assets\gambler\models\item\empty_jug.json
+cc982096fd5a65c37633578247b7900fd1c0296f assets\gambler\models\item\goose_jug.json
 df78dd0b96ffa9e6b15b54d64eef5598e9314bd9 assets\gambler\models\block\basic_fermenter.json

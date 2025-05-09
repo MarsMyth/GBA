@@ -5,7 +5,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import org.mythic_studios.gambler.GamblersDreamAlcohol;
-import org.mythic_studios.gambler.block.entity.BasicFermenterBlockEntity;
+import org.mythic_studios.gambler.block.alcohol.entity.BasicFermenterBlockEntity;
 
 public class AlcoholBlockEntities {
 
