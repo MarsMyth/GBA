@@ -3,7 +3,7 @@
 
   "block.gambler.basic_fermenter": "Basic Fermenter",
 
-  "effect.statuseffect.alcohol_poisoning": "Alcohol Poisoning",
+  "effect.gambler.alcohol_poisoning": "Alcohol Poisoning",
   "death.attack.alcohol_poisoning": "%1$s drank themselves to death",
   "death.attack.alcohol_poisoning.player": "%1$s drank themselves to death while trying to escape %2$s",
 
