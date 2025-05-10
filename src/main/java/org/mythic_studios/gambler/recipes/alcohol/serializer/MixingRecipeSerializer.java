@@ -1,4 +1,4 @@
-package org.mythic_studios.gambler.recipes.alcohol;
+package org.mythic_studios.gambler.recipes.alcohol.serializer;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
@@ -9,8 +9,8 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.util.Identifier;
 import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.network.RegistryByteBuf;
+import org.mythic_studios.gambler.recipes.alcohol.MixingRecipe;
 
 public class MixingRecipeSerializer implements RecipeSerializer<MixingRecipe> {
 
