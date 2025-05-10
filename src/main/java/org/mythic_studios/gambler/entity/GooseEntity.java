@@ -10,8 +10,12 @@ import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.loot.LootTable;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.mythic_studios.gambler.init.ModEntities;
@@ -32,7 +36,7 @@ public class GooseEntity extends AnimalEntity {
 
         this.goalSelector.add(1, new EscapeDangerGoal(this, 1.1D));
         this.goalSelector.add(2, new AnimalMateGoal(this, 1.15D));
-        this.goalSelector.add(3, new TemptGoal(this, 1.25D, Ingredient.ofItems(AlcoholItems.EMPTY_JUG), false));
+        this.goalSelector.add(3, new TemptGoal(this, 1.25D, Ingredient.ofItems(AlcoholItems.RECOOKED_PIZZA), false));
 
         this.goalSelector.add(4, new FollowParentGoal(this, 1.1D));
 
@@ -69,11 +73,16 @@ public class GooseEntity extends AnimalEntity {
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.isOf(AlcoholItems.GOOSE_IN_A_JUG);
+        return stack.isOf(AlcoholItems.RECOOKED_PIZZA);
     }
 
     @Override
     public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
         return ModEntities.GOOSE.create(world);
+    }
+
+    @Override
+    protected RegistryKey<LootTable> getLootTableId() {
+        return RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("gambler", "entities/goose"));
     }
 }

@@ -11,6 +11,7 @@ import org.mythic_studios.gambler.init.alchohol.AlchoholScreenHandlers;
 import org.mythic_studios.gambler.init.alchohol.AlcoholBlockEntities;
 import org.mythic_studios.gambler.init.alchohol.AlcoholBlocks;
 import org.mythic_studios.gambler.init.alchohol.AlcoholItems;
+import org.mythic_studios.gambler.init.ModWorldGen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +23,7 @@ public class GamblersDreamAlcohol implements ModInitializer {
 	public void onInitialize() {
 		ConfigRegistery.register();
 		ModEntities.registerModEntities();
+		ModWorldGen.generateModWorldGen();
 
 		ModRecipes.register();
 
