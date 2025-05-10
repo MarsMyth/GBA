@@ -1,5 +1,6 @@
 package org.mythic_studios.gambler.data;
 
+import com.terraformersmc.modmenu.util.mod.Mod;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.AbstractBlock;
@@ -26,6 +27,10 @@ public class AlcoholModelGenerator extends FabricModelProvider {
 
         itemModelGenerator.register(AlcoholItems.EMPTY_JUG, Models.GENERATED);
         itemModelGenerator.register(AlcoholItems.GOOSE_IN_A_JUG, Models.GENERATED);
+        itemModelGenerator.register(AlcoholItems.WATER_JUG, Models.GENERATED);
+
+        itemModelGenerator.register(AlcoholItems.PIZZA_SLICE, Models.GENERATED);
+        itemModelGenerator.register(AlcoholItems.RECOOKED_PIZZA, Models.GENERATED);
 
     }
 }

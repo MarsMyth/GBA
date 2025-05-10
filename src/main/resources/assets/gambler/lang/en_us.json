@@ -12,7 +12,10 @@
   "tooltip.goose_jug.2": "Well it might be able to turned into alcohol",
 
   "tooltip.pizza.1": "Seems like its dried in it's feathers... so its inedible",
-  "tooltip.pizza.2": "Might be able to lure Gooses to me though",
+  "tooltip.pizza.2": "Might be to mix this with a Goose though",
+
+  "tooltip.recooked_pizza.1": "It's cooked so I will be able to eat it",
+  "tooltip.recooked_pizza.2": "Might be able to lure Gooses to me",
 
   "text.autoconfig.gambler.title": "Gambler's Dream & Alcohol Config",
   "text.autoconfig.gambler.category.general_settings": "General Settings",
