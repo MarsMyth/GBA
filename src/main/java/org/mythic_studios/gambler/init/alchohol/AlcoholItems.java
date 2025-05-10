@@ -17,6 +17,9 @@ public class AlcoholItems {
     public static Item EMPTY_JUG;
     public static Item GOOSE_IN_A_JUG;
 
+    public static Item PIZZA_SLICE;
+    public static Item RECOOKED_PIZZA;
+
     public static void init() {
 
         EMPTY_JUG = createItem("empty_jug", new JugItem(new Item.Settings()));
@@ -27,6 +30,18 @@ public class AlcoholItems {
                 tooltip.add(Text.literal(" "));
                 tooltip.add(Text.translatable("tooltip.goose_jug.1"));
                 tooltip.add(Text.translatable("tooltip.goose_jug.2"));
+
+                super.appendTooltip(stack, context, tooltip, type);
+            }
+        });
+
+        PIZZA_SLICE = createItem("pizza_slice", new Item(new Item.Settings()) {
+            @Override
+            public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+
+                tooltip.add(Text.literal(" "));
+                tooltip.add(Text.translatable("tooltip.pizza.1"));
+                tooltip.add(Text.translatable("tooltip.pizza.2"));
 
                 super.appendTooltip(stack, context, tooltip, type);
             }

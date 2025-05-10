@@ -2,7 +2,10 @@ package org.mythic_studios.gambler;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import org.mythic_studios.gambler.entity.GooseEntity;
 import org.mythic_studios.gambler.init.ConfigRegistery;
+import org.mythic_studios.gambler.init.ModEntities;
 import org.mythic_studios.gambler.init.alchohol.AlchoholScreenHandlers;
 import org.mythic_studios.gambler.init.alchohol.AlcoholBlockEntities;
 import org.mythic_studios.gambler.init.alchohol.AlcoholBlocks;
@@ -17,6 +20,7 @@ public class GamblersDreamAlcohol implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ConfigRegistery.register();
+		ModEntities.registerModEntities();
 
 		AlcoholBlocks.init();
 		AlcoholBlockEntities.registerBlockEntities();
@@ -24,5 +28,7 @@ public class GamblersDreamAlcohol implements ModInitializer {
 		AlchoholScreenHandlers.registerScreenHandlers();
 
 		LOGGER.info("Hello Fabric world!");
+
+		FabricDefaultAttributeRegistry.register(ModEntities.GOOSE, GooseEntity.createAttributes());
 	}
 }

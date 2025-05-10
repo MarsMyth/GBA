@@ -12,6 +12,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import org.mythic_studios.gambler.entity.GooseEntity;
 import org.mythic_studios.gambler.init.alchohol.AlcoholItems;
 
 public class JugItem extends Item {
@@ -22,7 +23,7 @@ public class JugItem extends Item {
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
         // Only allow capturing specific entity type (e.g., Cow)
-        if (!(entity instanceof CowEntity)) {
+        if (!(entity instanceof GooseEntity)) {
             return TypedActionResult.pass(stack).getResult();
         }
 
@@ -30,12 +31,15 @@ public class JugItem extends Item {
             // Remove entity from world
             entity.remove(Entity.RemovalReason.KILLED);
 
-            // Replace the item with the "captured" item
+            if (!user.isCreative()) {
+                stack.decrement(1);
+            }
+
+            // Replace the item with the goose
             ItemStack newStack = new ItemStack(AlcoholItems.GOOSE_IN_A_JUG);
-
-
-            // Replace item in hand
-            user.setStackInHand(hand, newStack);
+            if (!user.giveItemStack(newStack)) {
+                user.dropItem(newStack, false);
+            }
         }
 
         return TypedActionResult.success(user.getStackInHand(hand), user.getWorld().isClient()).getResult();
