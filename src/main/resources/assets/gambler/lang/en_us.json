@@ -5,6 +5,10 @@
 
   "item.gambler.empty_jug": "Empty Jug",
   "item.gambler.goose_jug": "Goose in a Jug",
+  "item.gambler.water_jug": "Jug of Water",
+
+  "item.gambler.pizza_slice": "Pizza Slice",
+  "item.gambler.recooked_pizza": "Recooked Pizza Slice",
 
   "entity.gambler.goose": "Goose",
 
