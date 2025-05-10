@@ -1,4 +1,4 @@
-package org.mythic_studios.gambler.init.alchohol;
+package org.mythic_studios.gambler.init.alchohol.making;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -21,7 +21,6 @@ public class AlcoholItems {
     public static Item GRAPE_JUICE_JUG;
 
     public static Item EMPTY_WINE_BOTTLE;
-    public static Item UNAGED_GRAPE_WINE;
 
     public static Item PIZZA_SLICE;
     public static Item RECOOKED_PIZZA;

@@ -19,7 +19,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.mythic_studios.gambler.init.ModEntities;
-import org.mythic_studios.gambler.init.alchohol.AlcoholItems;
+import org.mythic_studios.gambler.init.alchohol.making.AlcoholItems;
 
 public class GooseEntity extends AnimalEntity {
     public final AnimationState idleAnimationState = new AnimationState();

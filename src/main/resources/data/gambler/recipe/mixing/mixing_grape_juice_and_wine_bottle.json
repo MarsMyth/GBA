@@ -1,0 +1,6 @@
+{
+  "type": "gambler:mixing",
+  "ingredient1": { "item": "gambler:empty_wine_bottle" },
+  "ingredient2": { "item": "gambler:grape_juice_jug" },
+  "result": { "item": "gambler:unaged_grape_wine", "count": 1 }
+}

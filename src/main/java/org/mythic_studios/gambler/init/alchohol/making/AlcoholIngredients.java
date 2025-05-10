@@ -1,9 +1,9 @@
-package org.mythic_studios.gambler.init.alchohol;
+package org.mythic_studios.gambler.init.alchohol.making;
 
 import net.minecraft.item.Item;
 import org.mythic_studios.gambler.item.ModFoodComponents;
 
-import static org.mythic_studios.gambler.init.alchohol.AlcoholItems.createItem;
+import static org.mythic_studios.gambler.init.alchohol.making.AlcoholItems.createItem;
 
 public class AlcoholIngredients {
 
