@@ -107,14 +107,6 @@ public class IngredientMixerBE extends BlockEntity implements ExtendedScreenHand
     }
 
     public void tick(World world, BlockPos pos, BlockState state) {
-        Optional<RecipeEntry<MixingRecipe>> recipe = getCurrentRecipe();
-
-        if (recipe.isEmpty()) {
-            System.out.println("No matching recipe found!");
-        } else {
-            System.out.println("Found matching recipe: " + recipe.get().value());
-        }
-
         if (hasRecipe()) {
             increaseCraftingProgress();
             markDirty(world, pos, state);
@@ -150,10 +142,6 @@ public class IngredientMixerBE extends BlockEntity implements ExtendedScreenHand
     private void craftItem() {
         getCurrentRecipe().ifPresent(recipe -> {
             ItemStack output = recipe.value().output();
-
-            // Check output and inventory before crafting
-            System.out.println("Output: " + output);
-
             // Only craft if the recipe is valid
             if (hasRecipe()) {
                 // Remove ingredients and add the output item

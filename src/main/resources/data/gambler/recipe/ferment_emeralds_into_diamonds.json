@@ -1,0 +1,9 @@
+{
+  "type": "gambler:fermenting",
+  "ingredient": {
+    "item": "minecraft:emerald"
+  },
+  "result": {
+    "id": "minecraft:diamond"
+  }
+}

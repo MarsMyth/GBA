@@ -7,11 +7,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -21,8 +21,13 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import org.mythic_studios.gambler.init.ModRecipes;
 import org.mythic_studios.gambler.init.alchohol.AlcoholBlockEntities;
+import org.mythic_studios.gambler.recipes.alcohol.FermentingRecipe;
+import org.mythic_studios.gambler.recipes.alcohol.FermentingRecipeInput;
 import org.mythic_studios.gambler.screen.alcohol.BasicFermenterScreenHandler;
+
+import java.util.Optional;
 
 public class BasicFermenterBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory<BlockPos>, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
@@ -100,6 +105,10 @@ public class BasicFermenterBlockEntity extends BlockEntity implements ExtendedSc
     }
 
     public void tick(World world, BlockPos pos, BlockState state) {
+        if(world.isClient()) {
+            return;
+        }
+
         if(hasRecipe() && canInsertIntoOutputSlot()) {
             increaseCraftingProgress();
             markDirty(world, pos, state);
@@ -119,8 +128,11 @@ public class BasicFermenterBlockEntity extends BlockEntity implements ExtendedSc
     }
 
     private void craftItem() {
+        Optional<RecipeEntry<FermentingRecipe>> recipe = getCurrentRecipe();
+
         this.removeStack(INPUT_SLOT, 1);
-        this.setStack(OUTPUT_SLOT, new ItemStack(Items.DIAMOND, this.getStack(OUTPUT_SLOT).getCount() + 1));
+        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().value().output().getItem(),
+                this.getStack(OUTPUT_SLOT).getCount() + recipe.get().value().output().getCount()));
     }
 
     private boolean hasCraftingFinished() {
@@ -137,11 +149,18 @@ public class BasicFermenterBlockEntity extends BlockEntity implements ExtendedSc
     }
 
     private boolean hasRecipe() {
-        ItemStack input = new ItemStack(Items.EMERALD);
-        ItemStack output = new ItemStack(Items.DIAMOND);
+        Optional<RecipeEntry<FermentingRecipe>> recipe = getCurrentRecipe();
+        if(recipe.isEmpty()) {
+            return false;
+        }
 
-        return this.getStack(INPUT_SLOT).getItem() == input.getItem() &&
-                canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+        ItemStack output = recipe.get().value().getResult(null);
+        return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+    }
+
+    private Optional<RecipeEntry<FermentingRecipe>> getCurrentRecipe() {
+        return this.getWorld().getRecipeManager()
+                .getFirstMatch(ModRecipes.FERMENTING_TYPE, new FermentingRecipeInput(inventory.get(INPUT_SLOT)), this.getWorld());
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
@@ -149,9 +168,11 @@ public class BasicFermenterBlockEntity extends BlockEntity implements ExtendedSc
     }
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
-        return this.getStack(OUTPUT_SLOT).getMaxCount() >= this.getStack(OUTPUT_SLOT).getCount() + count;
-    }
+        int maxCount = this.getStack(OUTPUT_SLOT).isEmpty() ? 64 : this.getStack(OUTPUT_SLOT).getMaxCount();
+        int currentCount = this.getStack(OUTPUT_SLOT).getCount();
 
+        return maxCount >= currentCount + count;
+    }
 
     @Nullable
     @Override
