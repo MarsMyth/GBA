@@ -30,8 +30,8 @@ public class BasicFermenterScreenHandler extends ScreenHandler {
         this.propertyDelegate = arrayPropertyDelegate;
         this.blockEntity = ((BasicFermenterBlockEntity) blockEntity);
 
-        this.addSlot(new Slot(inventory, 0, 54, 34));
-        this.addSlot(new Slot(inventory, 1, 104, 34));
+        this.addSlot(new Slot(inventory, 0, 53, 33));
+        this.addSlot(new Slot(inventory, 1, 104, 33));
 
 
         addPlayerInventory(playerInventory);
