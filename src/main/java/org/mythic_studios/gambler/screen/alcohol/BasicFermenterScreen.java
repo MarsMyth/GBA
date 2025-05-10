@@ -24,9 +24,10 @@ public class BasicFermenterScreen extends HandledScreen<BasicFermenterScreenHand
     protected void init() {
         super.init();
 
-        // Get rid of title and inventory title
-        titleY = 1000;
-        playerInventoryTitleY = 1000;
+        titleY = 4;
+        titleX = 6;
+        playerInventoryTitleY = 74;
+        playerInventoryTitleX = 6;
     }
 
     @Override

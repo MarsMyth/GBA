@@ -18,6 +18,10 @@ public class AlcoholItems {
     public static Item EMPTY_JUG;
     public static Item GOOSE_IN_A_JUG;
     public static Item WATER_JUG;
+    public static Item GRAPE_JUICE_JUG;
+
+    public static Item EMPTY_WINE_BOTTLE;
+    public static Item UNAGED_GRAPE_WINE;
 
     public static Item PIZZA_SLICE;
     public static Item RECOOKED_PIZZA;
@@ -26,6 +30,7 @@ public class AlcoholItems {
 
         EMPTY_JUG = createItem("empty_jug", new JugItem(new Item.Settings()));
         WATER_JUG = createItem("water_jug", new Item(new Item.Settings()));
+        GRAPE_JUICE_JUG = createItem("grape_juice_jug", new Item(new Item.Settings()));
         GOOSE_IN_A_JUG = createItem("goose_jug", new Item(new Item.Settings()) {
             @Override
             public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
@@ -61,10 +66,12 @@ public class AlcoholItems {
                 super.appendTooltip(stack, context, tooltip, type);
             }
         });
+
+        EMPTY_WINE_BOTTLE = createItem("empty_wine_bottle", new Item(new Item.Settings()));
     }
 
 
-    private static Item createItem(String name, Item item) {
+    static Item createItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(GamblersDreamAlcohol.MOD_ID, name), item);
     }
 }

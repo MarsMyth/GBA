@@ -30,8 +30,8 @@ public class IngredientMixerScreenHandler extends ScreenHandler {
         this.propertyDelegate = arrayPropertyDelegate;
         this.blockEntity = ((IngredientMixerBE) blockEntity);
 
-        this.addSlot(new Slot(inventory, 0, 53, 12));
-        this.addSlot(new Slot(inventory, 1, 53, 58));
+        this.addSlot(new Slot(inventory, 0, 53, 14));
+        this.addSlot(new Slot(inventory, 1, 53, 56));
         this.addSlot(new Slot(inventory, 2, 104, 34));
 
 

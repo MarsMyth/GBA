@@ -1,9 +1,11 @@
-// 1.21.1	2025-05-10T19:33:03.7968163	Gambler's Dream & Alcohol/Model Definitions
+// 1.21.1	2025-05-10T19:58:25.8644731	Gambler's Dream & Alcohol/Model Definitions
 4efef17a00921bad27b0c5f0a1432ee1236163ce assets\gambler\blockstates\basic_fermenter.json
 0ab3868c31ef8c11a69e46918c54c782c8c6f01a assets\gambler\models\item\pizza_slice.json
 1815595f1f769283cdd81f6c8ea707e1cc15115f assets\gambler\models\item\basic_fermenter.json
 01fa6e3c7bf3168f1ed8636753148c9f035ec490 assets\gambler\models\item\water_jug.json
 65da5b9dcb03d2792a79b29bc8c97080ca00a881 assets\gambler\models\item\empty_jug.json
+dc614adb0adb47d69a752402e5c78b7d1b62c558 assets\gambler\models\item\grapes.json
 cc982096fd5a65c37633578247b7900fd1c0296f assets\gambler\models\item\goose_jug.json
 df78dd0b96ffa9e6b15b54d64eef5598e9314bd9 assets\gambler\models\block\basic_fermenter.json
 c55e9cf20e66dda9c9378836060688f56ec58374 assets\gambler\models\item\recooked_pizza.json
+b1e183e6197c9e25c8f136ed552c7ef91b1360e7 assets\gambler\models\item\grape_juice_jug.json
