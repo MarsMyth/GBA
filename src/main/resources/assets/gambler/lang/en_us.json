@@ -3,10 +3,18 @@
 
   "block.gambler.basic_fermenter": "Basic Fermenter",
 
+  "effect.statuseffect.alcohol_poisoning": "Alcohol Poisoning",
+  "death.attack.alcohol_poisoning": "%1$s drank themselves to death",
+  "death.attack.alcohol_poisoning.player": "%1$s drank themselves to death while trying to escape %2$s",
+
   "item.gambler.empty_jug": "Jug (Empty)",
   "item.gambler.goose_jug": "Jug (Goose)",
   "item.gambler.water_jug": "Jug (Water)",
   "item.gambler.grape_juice_jug": "Jug (Grape Water)",
+
+  "item.gambler.empty_wine_bottle": "Wine Bottle (Empty)",
+
+  "item.gambler.unaged_grape_wine": "Unaged Wine (Grape)",
 
   "item.gambler.grapes": "Grapes",
 
