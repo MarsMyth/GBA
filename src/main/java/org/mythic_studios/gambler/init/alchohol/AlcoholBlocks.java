@@ -10,14 +10,17 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import org.mythic_studios.gambler.GamblersDreamAlcohol;
 import org.mythic_studios.gambler.block.alcohol.BasicFermenterBlock;
+import org.mythic_studios.gambler.block.alcohol.IngredientMixerBlock;
 
 public class AlcoholBlocks {
 
     public static Block BASIC_FERMENTER;
+    public static Block INGREDIENT_MIXER;
 
     public static void init() {
 
         BASIC_FERMENTER = registerBlock("basic_fermenter", new BasicFermenterBlock(AbstractBlock.Settings.copy(Blocks.STONE_BRICKS)));
+        INGREDIENT_MIXER = registerBlock("ingredient_mixer", new IngredientMixerBlock(AbstractBlock.Settings.copy(Blocks.STONE_BRICKS)));
 
     }
 

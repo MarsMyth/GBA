@@ -1,0 +1,6 @@
+{
+  "type": "gambler:mixing",
+  "ingredient1": { "item": "minecraft:emerald" },
+  "ingredient2": { "item": "gambler:goose_jug" },
+  "result": { "item": "minecraft:diamond", "count": 1 }
+}
