@@ -163,7 +163,6 @@ public class IngredientMixerBE extends BlockEntity implements ExtendedScreenHand
     }
 
     public Optional<RecipeEntry<MixingRecipe>> getCurrentRecipe() {
-        System.out.println("Checking for recipe with inputs: " + inventory.get(0) + " and " + inventory.get(1));
         return Objects.requireNonNull(this.getWorld()).getRecipeManager()
                 .getFirstMatch(ModRecipes.MIXING_TYPE, new MixingRecipeInput(
                         inventory.get(0),
