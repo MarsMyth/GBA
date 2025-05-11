@@ -2,6 +2,7 @@
 
 
   "block.gambler.basic_fermenter": "Basic Fermenter",
+  "block.gambler.ingredient_mixer": "Ingredient Mixer",
 
   "effect.gambler.alcohol_poisoning": "Alcohol Poisoning",
   "death.attack.alcohol_poisoning": "%1$s drank themselves to death",

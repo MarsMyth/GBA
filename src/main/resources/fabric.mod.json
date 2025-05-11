@@ -21,6 +21,9 @@
 		"client": [
 			"org.mythic_studios.gambler.GamblersDreamAlcoholClient"
 		],
+		"rei_client": [
+			"org.mythic_studios.gambler.compat.GDAReiClient"
+		],
 		"modmenu": [
 			"org.mythic_studios.gambler.config.ModMenuIntegration"
 		],

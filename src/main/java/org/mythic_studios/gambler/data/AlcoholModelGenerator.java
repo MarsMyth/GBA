@@ -19,6 +19,7 @@ public class AlcoholModelGenerator extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 
         blockStateModelGenerator.registerSimpleCubeAll(AlcoholBlocks.BASIC_FERMENTER);
+        blockStateModelGenerator.registerSimpleCubeAll(AlcoholBlocks.INGREDIENT_MIXER);
 
     }
 
