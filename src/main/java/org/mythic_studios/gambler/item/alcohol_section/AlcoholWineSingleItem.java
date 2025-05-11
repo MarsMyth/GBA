@@ -35,6 +35,7 @@ public class AlcoholWineSingleItem extends Item {
                 tooltip.add(Text.translatable("tooltip.wine.unaged"));
             }
         } else if (Screen.hasControlDown() && !Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("tooltip.ingredient.1"));
             if (Objects.equals(ingredient, "Grape")) {
                 tooltip.add(Text.translatable("tooltip.ingredient.grape"));
             } else if (Objects.equals(ingredient, "Goose")) {
