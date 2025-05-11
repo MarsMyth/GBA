@@ -30,6 +30,7 @@ public class AlcoholModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(AlcoholItems.GOOSE_IN_A_JUG, Models.GENERATED);
         itemModelGenerator.register(AlcoholItems.WATER_JUG, Models.GENERATED);
         itemModelGenerator.register(AlcoholItems.GRAPE_JUICE_JUG, Models.GENERATED);
+        itemModelGenerator.register(AlcoholItems.GOOSE_JUICE_JUG, Models.GENERATED);
 
         itemModelGenerator.register(AlcoholItems.EMPTY_WINE_BOTTLE, Models.GENERATED);
 

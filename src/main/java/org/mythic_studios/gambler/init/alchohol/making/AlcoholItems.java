@@ -19,6 +19,7 @@ public class AlcoholItems {
     public static Item GOOSE_IN_A_JUG;
     public static Item WATER_JUG;
     public static Item GRAPE_JUICE_JUG;
+    public static Item GOOSE_JUICE_JUG;
 
     public static Item EMPTY_WINE_BOTTLE;
 
@@ -30,6 +31,7 @@ public class AlcoholItems {
         EMPTY_JUG = createItem("empty_jug", new JugItem(new Item.Settings()));
         WATER_JUG = createItem("water_jug", new Item(new Item.Settings()));
         GRAPE_JUICE_JUG = createItem("grape_juice_jug", new Item(new Item.Settings()));
+        GOOSE_JUICE_JUG = createItem("goose_juice", new Item(new Item.Settings()));
         GOOSE_IN_A_JUG = createItem("goose_jug", new Item(new Item.Settings()) {
             @Override
             public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {

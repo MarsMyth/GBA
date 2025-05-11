@@ -11,6 +11,7 @@
 
   "item.gambler.empty_jug": "Jug (Empty)",
   "item.gambler.goose_jug": "Jug (Goose)",
+  "item.gambler.goose_juice": "Jug (Goose Juice)",
   "item.gambler.water_jug": "Jug (Water)",
   "item.gambler.grape_juice_jug": "Jug (Grape Water)",
 
@@ -36,7 +37,7 @@
   "tooltip.ctrl": "Press Ctrl to read Ingredients",
 
   "tooltip.wine.aged": "Wine: Aged",
-  "tooltip.wine.unaged": "Wine: Unaged (Poison Chance HIGH)",
+  "tooltip.wine.unaged": "Wine: Unaged (Poison Chance: HIGH)",
 
   "tooltip.ingredient.1": "Ingredients: ",
   "tooltip.ingredient.grape": "Grapes",

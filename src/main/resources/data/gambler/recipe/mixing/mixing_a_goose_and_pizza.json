@@ -1,0 +1,6 @@
+{
+  "type": "gambler:mixing",
+  "ingredient1": { "item": "gambler:pizza_slice" },
+  "ingredient2": { "item": "gambler:goose_jug" },
+  "result": { "item": "gambler:goose_juice", "count": 1 }
+}
