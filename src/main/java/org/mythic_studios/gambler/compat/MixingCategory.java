@@ -30,7 +30,7 @@ public class MixingCategory implements DisplayCategory<MixingDisplay> {
 
     @Override
     public Text getTitle() {
-        return Text.translatable("block.gambler.ingredient_mixer");
+        return Text.translatable("gui.recipe.mixing");
     }
 
     @Override

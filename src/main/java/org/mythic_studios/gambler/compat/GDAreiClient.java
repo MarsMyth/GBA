@@ -16,6 +16,7 @@ import org.mythic_studios.gambler.recipes.alcohol.FermentingRecipe;
 import org.mythic_studios.gambler.recipes.alcohol.MixingRecipe;
 import org.mythic_studios.gambler.screen.alcohol.BasicFermenterScreen;
 import org.mythic_studios.gambler.screen.alcohol.IngredientMixerScreen;
+import org.mythic_studios.gambler.screen.alcohol.MechanicalFermenterScreen;
 
 import java.util.HashSet;
 import java.util.List;
@@ -27,6 +28,7 @@ public class GDAReiClient implements REIClientPlugin {
     public void registerCategories(CategoryRegistry registry) {
         registry.add(new FermenterCategory());
         registry.addWorkstations(FermenterCategory.BREWER, EntryStacks.of(AlcoholBlocks.BASIC_FERMENTER));
+        registry.addWorkstations(FermenterCategory.BREWER, EntryStacks.of(AlcoholBlocks.MECHANICAL_FERMENTER));
 
         registry.add(new MixingCategory());
 
@@ -88,6 +90,10 @@ public class GDAReiClient implements REIClientPlugin {
     public void registerScreens(ScreenRegistry registry) {
         registry.registerClickArea(screen -> new Rectangle(((screen.width - 176) / 2) + 78,
                         ((screen.height - 166) / 2) + 30, 20, 25), BasicFermenterScreen.class,
+                FermenterCategory.BREWER);
+
+        registry.registerClickArea(screen -> new Rectangle(((screen.width - 176) / 2) + 78,
+                        ((screen.height - 166) / 2) + 30, 20, 25), MechanicalFermenterScreen.class,
                 FermenterCategory.BREWER);
 
         registry.registerClickArea(screen -> new Rectangle(((screen.width - 176) / 2) + 78,

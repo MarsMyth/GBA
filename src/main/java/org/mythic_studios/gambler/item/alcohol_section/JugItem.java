@@ -1,5 +1,6 @@
 package org.mythic_studios.gambler.item.alcohol_section;
 
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -7,6 +8,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -22,12 +25,23 @@ public class JugItem extends Item {
 
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-        // Only allow capturing specific entity type (e.g., Cow)
+        World world = MinecraftClient.getInstance().world;
+
         if (!(entity instanceof GooseEntity)) {
             return TypedActionResult.pass(stack).getResult();
         }
 
         if (!user.getWorld().isClient) {
+
+            world.playSound(
+                    null,
+                    user.getBlockPos(),
+                    SoundEvents.BLOCK_BARREL_CLOSE,
+                    SoundCategory.PLAYERS,
+                    1.0f,
+                    1.0f
+            );
+
             // Remove entity from world
             entity.remove(Entity.RemovalReason.KILLED);
 
@@ -35,11 +49,15 @@ public class JugItem extends Item {
                 stack.decrement(1);
             }
 
+
+
             // Replace the item with the goose
             ItemStack newStack = new ItemStack(AlcoholItems.GOOSE_IN_A_JUG);
             if (!user.giveItemStack(newStack)) {
                 user.dropItem(newStack, false);
             }
+
+
         }
 
         return TypedActionResult.success(user.getStackInHand(hand), user.getWorld().isClient()).getResult();
@@ -60,6 +78,15 @@ public class JugItem extends Item {
                 if (!user.isCreative()) {
                     stack.decrement(1);
                 }
+
+                world.playSound(
+                        null,
+                        user.getBlockPos(),
+                        SoundEvents.ITEM_BUCKET_FILL,
+                        SoundCategory.PLAYERS,
+                        1.0f,
+                        1.0f
+                );
 
                 // Replace the item with the water
                 ItemStack newStack = new ItemStack(AlcoholItems.WATER_JUG);

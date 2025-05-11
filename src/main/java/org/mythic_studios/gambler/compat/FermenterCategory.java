@@ -30,12 +30,12 @@ public class FermenterCategory implements DisplayCategory<BasicDisplay> {
 
     @Override
     public Text getTitle() {
-        return Text.translatable("block.gambler.basic_fermenter");
+        return Text.translatable("gui.recipe.fermenter");
     }
 
     @Override
     public Renderer getIcon() {
-        return EntryStacks.of(AlcoholBlocks.BASIC_FERMENTER.asItem().getDefaultStack());
+        return EntryStacks.of(AlcoholBlocks.MECHANICAL_FERMENTER.asItem().getDefaultStack());
     }
 
     // Done with the help:

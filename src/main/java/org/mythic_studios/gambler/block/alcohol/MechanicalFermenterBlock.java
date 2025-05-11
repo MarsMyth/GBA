@@ -17,13 +17,13 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import org.mythic_studios.gambler.block.alcohol.entity.IngredientMixerBE;
+import org.mythic_studios.gambler.block.alcohol.entity.MechanicalFermenterBlockEntity;
 import org.mythic_studios.gambler.init.alchohol.AlcoholBlockEntities;
 
-public class IngredientMixerBlock extends BlockWithEntity {
-    public static final MapCodec<IngredientMixerBlock> CODEC = createCodec(IngredientMixerBlock::new);
+public class MechanicalFermenterBlock extends BlockWithEntity {
+    public static final MapCodec<MechanicalFermenterBlock> CODEC = createCodec(MechanicalFermenterBlock::new);
 
-    public IngredientMixerBlock(Settings settings) {
+    public MechanicalFermenterBlock(Settings settings) {
         super(settings);
     }
 
@@ -35,7 +35,7 @@ public class IngredientMixerBlock extends BlockWithEntity {
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new IngredientMixerBE(pos, state);
+        return new MechanicalFermenterBlockEntity(pos, state);
     }
 
     @Override
@@ -46,7 +46,7 @@ public class IngredientMixerBlock extends BlockWithEntity {
     @Override
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
-            if (world.getBlockEntity(pos) instanceof IngredientMixerBE crystallizerBlockEntity) {
+            if (world.getBlockEntity(pos) instanceof MechanicalFermenterBlockEntity crystallizerBlockEntity) {
                 ItemScatterer.spawn(world, pos, crystallizerBlockEntity);
                 world.updateComparators(pos, this);
             }
@@ -57,7 +57,7 @@ public class IngredientMixerBlock extends BlockWithEntity {
     @Override
     protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
-            NamedScreenHandlerFactory screenHandlerFactory = ((IngredientMixerBE) world.getBlockEntity(pos));
+            NamedScreenHandlerFactory screenHandlerFactory = ((MechanicalFermenterBlockEntity) world.getBlockEntity(pos));
 
             if (screenHandlerFactory != null) {
                 player.openHandledScreen(screenHandlerFactory);
@@ -70,6 +70,6 @@ public class IngredientMixerBlock extends BlockWithEntity {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(type, AlcoholBlockEntities.INGREDIENT_MIXER_BE, (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
+        return validateTicker(type, AlcoholBlockEntities.MECHANICAL_FERMENTER_BE, (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }
 }

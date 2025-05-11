@@ -7,12 +7,17 @@ import net.minecraft.util.Identifier;
 import org.mythic_studios.gambler.GamblersDreamAlcohol;
 import org.mythic_studios.gambler.block.alcohol.entity.BasicFermenterBlockEntity;
 import org.mythic_studios.gambler.block.alcohol.entity.IngredientMixerBE;
+import org.mythic_studios.gambler.block.alcohol.entity.MechanicalFermenterBlockEntity;
 
 public class AlcoholBlockEntities {
 
     public static final BlockEntityType<BasicFermenterBlockEntity> BASIC_FERMENTER_BE =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(GamblersDreamAlcohol.MOD_ID, "basic_fermenter_be"),
                     BlockEntityType.Builder.create(BasicFermenterBlockEntity::new, AlcoholBlocks.BASIC_FERMENTER).build(null));
+
+    public static final BlockEntityType<MechanicalFermenterBlockEntity> MECHANICAL_FERMENTER_BE =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(GamblersDreamAlcohol.MOD_ID, "mechanical_fermenter_be"),
+                    BlockEntityType.Builder.create(MechanicalFermenterBlockEntity::new, AlcoholBlocks.MECHANICAL_FERMENTER).build(null));
 
     public static final BlockEntityType<IngredientMixerBE> INGREDIENT_MIXER_BE =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(GamblersDreamAlcohol.MOD_ID, "ingredient_mixer_be"),

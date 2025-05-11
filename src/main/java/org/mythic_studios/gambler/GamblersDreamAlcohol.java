@@ -22,6 +22,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.UUID;
 
 public class GamblersDreamAlcohol implements ModInitializer {
@@ -78,6 +79,10 @@ public class GamblersDreamAlcohol implements ModInitializer {
 							));
 							// Remove from tracking map
 							playerHadAlcoholEffect.remove(player.getUuid());
+
+							if (effectData.duration == 0) {
+								player.removeStatusEffect(AlcoholEffects.ALCOHOL_POISONING);
+							}
 						}
 					}
 
@@ -109,8 +114,8 @@ public class GamblersDreamAlcohol implements ModInitializer {
 		EntitySleepEvents.STOP_SLEEPING.register((entity, sleepingPos) -> {
 			// Check if entity is a player and has our effect
 			if (entity instanceof ServerPlayerEntity player && player.hasStatusEffect(AlcoholEffects.ALCOHOL_POISONING)) {
-				// Remove the alcohol poisoning effect when player wakes up
-				player.removeStatusEffect(AlcoholEffects.ALCOHOL_POISONING);
+                player.removeStatusEffect(AlcoholEffects.ALCOHOL_POISONING);
+				playerHadAlcoholEffect.remove(player.getUuid());
 			}
 		});
 	}

@@ -12,6 +12,7 @@ import org.mythic_studios.gambler.init.ModEntities;
 import org.mythic_studios.gambler.init.alchohol.AlchoholScreenHandlers;
 import org.mythic_studios.gambler.screen.alcohol.BasicFermenterScreen;
 import org.mythic_studios.gambler.screen.alcohol.IngredientMixerScreen;
+import org.mythic_studios.gambler.screen.alcohol.MechanicalFermenterScreen;
 
 public class GamblersDreamAlcoholClient implements ClientModInitializer {
     @Override
@@ -22,6 +23,7 @@ public class GamblersDreamAlcoholClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.GOOSE, GooseRenderer::new);
 
         HandledScreens.register(AlchoholScreenHandlers.BASIC_FERMENTER_SCREEN_HANDLER, BasicFermenterScreen::new);
+        HandledScreens.register(AlchoholScreenHandlers.MECHANICAL_FERMENTER_SCREEN_HANDLER, MechanicalFermenterScreen::new);
         HandledScreens.register(AlchoholScreenHandlers.INGREDIENT_MIXER_SCREEN_HANDLER, IngredientMixerScreen::new);
     }
 }

@@ -9,6 +9,7 @@ import net.minecraft.util.math.BlockPos;
 import org.mythic_studios.gambler.GamblersDreamAlcohol;
 import org.mythic_studios.gambler.screen.alcohol.BasicFermenterScreenHandler;
 import org.mythic_studios.gambler.screen.alcohol.IngredientMixerScreenHandler;
+import org.mythic_studios.gambler.screen.alcohol.MechanicalFermenterScreenHandler;
 
 public class AlchoholScreenHandlers {
     public static final ScreenHandlerType<BasicFermenterScreenHandler> BASIC_FERMENTER_SCREEN_HANDLER =
@@ -16,9 +17,9 @@ public class AlchoholScreenHandlers {
                     new ExtendedScreenHandlerType<>(BasicFermenterScreenHandler::new, BlockPos.PACKET_CODEC));
 
 
-//    public static final ScreenHandlerType<DougherScreenHandler> MECHANICAL_FERMENTER_SCREEN_HANDLER =
-//            Registry.register(Registries.SCREEN_HANDLER, Identifier.of(GamblersDreamAlcohol.MOD_ID, "mechanical_fermenter_screen_handler"),
-//                    new ExtendedScreenHandlerType<>(DougherScreenHandler::new, BlockPos.PACKET_CODEC));
+    public static final ScreenHandlerType<MechanicalFermenterScreenHandler> MECHANICAL_FERMENTER_SCREEN_HANDLER =
+            Registry.register(Registries.SCREEN_HANDLER, Identifier.of(GamblersDreamAlcohol.MOD_ID, "mechanical_fermenter_screen_handler"),
+                   new ExtendedScreenHandlerType<>(MechanicalFermenterScreenHandler::new, BlockPos.PACKET_CODEC));
 
     public static final ScreenHandlerType<IngredientMixerScreenHandler> INGREDIENT_MIXER_SCREEN_HANDLER =
             Registry.register(Registries.SCREEN_HANDLER, Identifier.of(GamblersDreamAlcohol.MOD_ID, "ingredient_mixer_screen_handler"),

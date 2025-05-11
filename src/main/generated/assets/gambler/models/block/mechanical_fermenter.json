@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "gambler:block/basic_fermenter"
+    "all": "gambler:block/mechanical_fermenter"
   }
 }

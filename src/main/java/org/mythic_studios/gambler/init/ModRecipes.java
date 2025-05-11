@@ -27,7 +27,7 @@ public class ModRecipes {
             Registries.RECIPE_TYPE, Identifier.of(GamblersDreamAlcohol.MOD_ID, "fermenting"), new RecipeType<>() {
                 @Override
                 public String toString() {
-                    return "crystallizing";
+                    return "fermenting";
                 }
             });
 
