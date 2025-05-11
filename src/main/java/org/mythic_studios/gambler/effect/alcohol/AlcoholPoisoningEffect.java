@@ -30,7 +30,7 @@ public class AlcoholPoisoningEffect extends StatusEffect {
             DamageSources sources = entity.getDamageSources();
             DamageSource alcoholSource = AlcoholSources.alcohol(sources); // correct constructor
 
-            entity.damage(alcoholSource, 3.0F + amplifier * 0.5F);
+            entity.damage(alcoholSource, 1.0F + amplifier * 0.5F);
             return true;
         } // Indicates the effect was applied successfully
         return false;
