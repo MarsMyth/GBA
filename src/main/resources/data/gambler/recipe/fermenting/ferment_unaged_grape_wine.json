@@ -1,9 +1,9 @@
 {
   "type": "gambler:fermenting",
   "ingredient": {
-    "item": "minecraft:emerald"
+    "item": "gambler:unaged_grape_wine"
   },
   "result": {
-    "id": "minecraft:diamond"
+    "id": "gambler:aged_grape_wine"
   }
 }

@@ -15,6 +15,7 @@
   "item.gambler.empty_wine_bottle": "Wine Bottle (Empty)",
 
   "item.gambler.unaged_grape_wine": "Unaged Wine (Grape)",
+  "item.gambler.aged_grape_wine": "Aged Wine (Grape)",
 
   "item.gambler.grapes": "Grapes",
 
@@ -25,6 +26,12 @@
 
   "gui.gambler.fermenter": "Fermenter",
   "gui.gambler.ingredient_mixer": "Ingredient Mixer",
+
+  "tooltip.shift": "Press Shift to read Info/Details",
+  "tooltip.ctrl": "Press Ctrl to read Ingredients",
+
+  "tooltip.wine.aged": "Wine: Aged",
+  "tooltip.wine.unaged": "Wine: Unaged (Poison Chance HIGH)",
 
   "tooltip.goose_jug.1": "You monster you stuffed a Goose in a Jug... A JUG",
   "tooltip.goose_jug.2": "Well it might be able to turned into alcohol",

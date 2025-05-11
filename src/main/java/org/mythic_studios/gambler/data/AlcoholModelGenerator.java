@@ -33,6 +33,7 @@ public class AlcoholModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(AlcoholItems.EMPTY_WINE_BOTTLE, Models.GENERATED);
 
         itemModelGenerator.register(AlcoholGrapeDrinks.UNAGED_GRAPE_WINE, Models.GENERATED);
+        itemModelGenerator.register(AlcoholGrapeDrinks.AGED_GRAPE_WINE, Models.GENERATED);
 
         itemModelGenerator.register(AlcoholIngredients.GRAPES, Models.GENERATED);
 

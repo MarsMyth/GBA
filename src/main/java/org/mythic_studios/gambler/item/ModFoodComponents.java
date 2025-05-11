@@ -13,8 +13,8 @@ public class ModFoodComponents {
     public static final FoodComponent FRUITS = new FoodComponent.Builder().nutrition(4).saturationModifier(0.55f).snack().build();
 
     public static final FoodComponent ALCOHOL_UNAGED = new FoodComponent.Builder().nutrition(3).saturationModifier(0.25f)
-            .statusEffect(new StatusEffectInstance(AlcoholEffects.ALCOHOL_POISONING, 24000), 40f).build();
+            .statusEffect(new StatusEffectInstance(AlcoholEffects.ALCOHOL_POISONING, 24000), 40f).alwaysEdible().build();
 
-    public static final FoodComponent ALCOHOL_PURIFYED = new FoodComponent.Builder().nutrition(3).saturationModifier(0.25f)
-            .statusEffect(new StatusEffectInstance(AlcoholEffects.ALCOHOL_POISONING, 24000), 0.25f).build();
+    public static final FoodComponent ALCOHOL_AGED = new FoodComponent.Builder().nutrition(4).saturationModifier(0.25f)
+            .statusEffect(new StatusEffectInstance(AlcoholEffects.ALCOHOL_POISONING, 24000), 0.05f).alwaysEdible().build();
 }
