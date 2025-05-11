@@ -33,9 +33,9 @@
   "tooltip.wine.aged": "Wine: Aged",
   "tooltip.wine.unaged": "Wine: Unaged (Poison Chance HIGH)",
 
-  "tooltip.ingredients.1": "Ingredients: ",
-  "tooltip.ingredients.grape": "Grapes",
-  "tooltip.ingredients.goose": "An ENTIRE Goose",
+  "tooltip.ingredient.1": "Ingredients: ",
+  "tooltip.ingredient.grape": "Grapes",
+  "tooltip.ingredient.goose": "An ENTIRE Goose",
 
   "tooltip.goose_jug.1": "You monster you stuffed a Goose in a Jug... A JUG",
   "tooltip.goose_jug.2": "Well it might be able to turned into alcohol",
