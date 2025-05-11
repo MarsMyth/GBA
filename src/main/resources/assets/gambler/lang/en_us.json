@@ -25,7 +25,7 @@
   "entity.gambler.goose": "Goose",
 
   "gui.gambler.fermenter": "Fermenter",
-  "gui.gambler.ingredient_mixer": "Ingredient Mixer",
+  "gui.gambler.ingredient_mixer": "Mixer",
 
   "tooltip.shift": "Press Shift to read Info/Details",
   "tooltip.ctrl": "Press Ctrl to read Ingredients",
